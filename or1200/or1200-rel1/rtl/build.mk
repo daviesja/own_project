@@ -1,4 +1,4 @@
-OR1200_RTL_DIR = $(PROJECT_SRC)/or1200/or1200-rel1/rtl/verilog
+OR1200_RTL_DIR = $(PROJECT_SRC)/or1200-rel1/rtl/verilog
 
 OR1200_RTL_FILES = \
   $(OR1200_RTL_DIR)/or1200_alu.v \

@@ -278,13 +278,15 @@ assign dcqmem_dat_o = daddr_qmem_hit ? 32'h0000_0000 : qmemdcpu_dat_i;
 // Address comparison whether QMEM was hit
 //
 `ifdef OR1200_QMEM_IADDR
-assign iaddr_qmem_hit = (qmemimmu_adr_i & `OR1200_QMEM_IMASK) == `OR1200_QMEM_IADDR;
+assign iaddr_qmem_hit = 1'b1;
+//(qmemimmu_adr_i & `OR1200_QMEM_IMASK) == `OR1200_QMEM_IADDR;
 `else
 assign iaddr_qmem_hit = 1'b0;
 `endif
 
 `ifdef OR1200_QMEM_DADDR
-assign daddr_qmem_hit = (qmemdmmu_adr_i & `OR1200_QMEM_DMASK) == `OR1200_QMEM_DADDR;
+assign daddr_qmem_hit = 1'b1;
+//(qmemdmmu_adr_i & `OR1200_QMEM_DMASK) == `OR1200_QMEM_DADDR;
 `else
 assign daddr_qmem_hit = 1'b0;
 `endif

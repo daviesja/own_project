@@ -606,6 +606,8 @@ reg	[aw-1:0]	addr_reg;		// RAM address register
 //
 assign doq = (oe) ? mem[addr_reg] : {dw{1'b0}};
 
+initial
+  $readmemh("mem.data",mem);
 //
 // RAM address register
 //

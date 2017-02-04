@@ -961,7 +961,7 @@
 //
 
 // Define it if you want DU implemented
-`define OR1200_DU_IMPLEMENTED
+//`define OR1200_DU_IMPLEMENTED
 
 //
 // Define if you want HW Breakpoints
@@ -1102,7 +1102,7 @@
 //
 
 // Define it if you want PIC implemented
-`define OR1200_PIC_IMPLEMENTED
+//`define OR1200_PIC_IMPLEMENTED
 
 // Define number of interrupt inputs (2-31)
 `define OR1200_PIC_INTS 20
@@ -1131,7 +1131,7 @@
 //
 
 // Define it if you want TT implemented
-`define OR1200_TT_IMPLEMENTED
+//`define OR1200_TT_IMPLEMENTED
 
 // Address offsets of TT registers inside TT group
 `define OR1200_TT_OFS_TTMR 1'd0
