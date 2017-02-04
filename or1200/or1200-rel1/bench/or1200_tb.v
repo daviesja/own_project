@@ -29,7 +29,18 @@ module or1200_tb();
    .iwb_rst_i(rst),
    .iwb_dat_i(32'b0),
    .iwb_ack_i(1'b0),
-   .iwb_err_i(
+   .iwb_err_i(1'b0),
+   .iwb_rty_i(1'b0),
+   .iwb_cyc_o(),
+   .iwb_adr_o(),
+   .iwb_dat_o(),
+   .iwb_stb_o(),
+   .iwb_we_o(),
+   .iwb_sel_o(),
+   `ifdef OR1200_WB_CAB
+   .iwb_cab_o(),
+   `endif
+
   );
 
 endmodule
