@@ -1,0 +1,4 @@
+OR1200_TB_DIR = $(PROJECT_SRC)/rtl/bench
+
+OR1200_TB_FILES = \
+  $(OR1200_TB_DIR)/or1200_tb.v
