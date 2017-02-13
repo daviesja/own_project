@@ -5,6 +5,13 @@ module or1200_tb();
   reg clk_50;
   reg rst;
 
+  initial
+  begin
+    $fsdbDumpfile("or1200.fsdb");
+    $fsdbDumpvars();
+    $fsdbDumpon();
+  end
+
   initial 
   begin
     clk_50 = 1'b0;
