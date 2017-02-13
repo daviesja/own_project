@@ -1,0 +1,6 @@
+include $(PROJECT_SRC)/or1200-rel1/build.mk
+
+VCS_OPT=$(OR1200_RTL_INC_OPT)
+
+com_all: $(OR1200_RTL_FILES) $(OR1200_TB_FILES)
+	vcs $(VCS_OPT) $(OR1200_RTL_FILES) $(OR1200_TB_FILES)
