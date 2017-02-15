@@ -23,10 +23,10 @@ Example.or32: ram.ld $(OBJECTS)
 	$(LD) -T ram.ld $(OBJECTS) -o $@
 
 mem.bin: Example.or32
-	$(OBJECTS) -O binary $< $@
+	$(OBJCOPY) -O binary $< $@
 
 mem.data: mem.bin
-	./bin2mem -f $< -o $@
+	hexdump -v -e '4/1 "%02x" "\n"'  $< > $@
 
 Example.trace: Example.or32
 	sim -t $< -m1M > $@
